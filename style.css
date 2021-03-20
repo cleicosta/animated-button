@@ -1,0 +1,152 @@
+body{
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color:#3490dc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.wrapper section{
+    margin-bottom: 40px;
+}
+
+/*checkbook*/
+
+#checkbox{
+ display: none;
+
+}
+
+.checkbox-label{
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.4px;
+    font-size: 18px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.checkbox-label::before{
+    content: "";
+    display: block;
+    height: 3rem;
+    width: 3rem;
+    box-sizing: border-box;
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+    margin-right: 10px;
+    background-color: #ffffff;
+    background-image:url();
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: .3s ease-in-out;
+}
+#checkbox:checked +.checkbox-label::before{
+    background-color:blue;
+}
+
+
+/*Radio button*/
+
+#radio {
+    display: none;
+}
+
+.radio-label{
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.4px;
+    font-size: 18px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.radio-label::before{
+    content: "";
+    display: block;
+    height: 3rem;
+    width: 3rem;
+    box-sizing: border-box;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #ffffff;
+    transition: 0.3s ease-in-out;
+}
+#radio:checked + .radio-label::before{
+    background-color: blue;
+}
+
+#radio:checked + .radio-label::after{
+    background-color: #ffffff;
+}
+
+/*power button*/
+
+.power-button{
+    width: 6.8rem;
+    height: 3rem;
+    background-color: #dedede;
+    border-radius: 32px;
+}
+#powerbutton{
+    display: none;
+}
+
+.toggle{
+    width: 3rem;
+    height: 3rem;
+    display: block;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #fcfff4;
+    border: 1px solid #dedede;
+    border-radius: 32px;
+    box-shadow: none;
+    box-sizing: border-box;
+    transition: .3s cubic-bezier(0.895, 0.87, 0.685, 0.68);
+}
+.toggle::before{
+    content: "On";
+    color: #ffffff;
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 0;
+    top: 14px;
+    left: 12px;
+}
+.toggle::after{
+    content: "Off";
+    color: rgb(153,153,153);
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 14px;
+    top: 14px;
+    left: 10px;
+}
+#powerbutton:checked + .toggle{
+    left: 3.7rem;
+    background-color: blue;
+}
+#powerbutton:checked + .toggle::after{
+    font-size: 0;
+
+}
+#powerbutton:checked + .toggle::before{
+    font-size: 14px;
+
+}
