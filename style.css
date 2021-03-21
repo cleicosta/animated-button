@@ -1,5 +1,5 @@
 body{
-    font-family: sans-serif;
+    font-family: sans-serif ;
     padding: 0;
     margin: 0;
     background-color:#3490dc;
@@ -19,13 +19,14 @@ body{
 }
 
 .wrapper section{
+    
     margin-bottom: 40px;
 }
 
 /*checkbook*/
 
 #checkbox{
- display: none;
+    display: none;
 
 }
 
@@ -59,8 +60,16 @@ body{
 
 /*Radio button*/
 
+#radio-button input{
+    display: flex;
+    flex-direction: column;
+    height: 2px;
+}
+
 #radio {
     display: none;
+    
+        
 }
 
 .radio-label{
@@ -92,6 +101,40 @@ body{
     background-color: #ffffff;
 }
 
+#radio2{
+    
+    display: none;
+   
+}
+
+.radio-label2{
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.4px;
+    font-size: 18px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.radio-label2::before{
+    content: "";
+    display: block;
+    height: 3rem;
+    width: 3rem;
+    box-sizing: border-box;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #ffffff;
+    transition: 0.3s ease-in-out;
+}
+#radio2:checked + .radio-label2::before{
+    background-color: blue;
+}
+
+#radio2:checked + .radio-label2::after{
+    background-color: #ffffff;
+}
 /*power button*/
 
 .power-button{
@@ -131,7 +174,7 @@ body{
 }
 .toggle::after{
     content: "Off";
-    color: rgb(153,153,153);
+    color: #998d8d;
     position: absolute;
     text-transform: uppercase;
     font-size: 14px;
